@@ -8,9 +8,15 @@ import Home from "./sections/Home";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import Testimonials from "./sections/Testimonials";
+import IntroAnimation from "./components/IntroAnimation";
+import React from "react";
 
 export default function App() {
+  const [introDone, setIntroDone] = React.useState(false);  
   return (
+    <>
+    {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)}/>}
+    {introDone && (
     <div className="relative gradient text-white">
       <CustomCursor/>
       <Navbar/>
@@ -23,5 +29,7 @@ export default function App() {
       <Contact/>
       <Footer/>
     </div>
+      )}
+    </>
   )
 }

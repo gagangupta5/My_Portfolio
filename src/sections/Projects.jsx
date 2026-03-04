@@ -28,8 +28,8 @@ export default function Projects () {
   const sceneRef = useRef(null);
   const projects = useMemo(() => [
     {
-      title: "nk studio",
-      link: "https://www.nk.studio/",
+      title: "JobSphere",
+      link: "https://github.com/gagangupta5/JobSphere",
       bgcolor: "#0d4d3d",
       image : isMobile ? photo1 : img1
     },
